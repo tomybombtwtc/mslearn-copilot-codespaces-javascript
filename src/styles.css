@@ -123,3 +123,26 @@ img.socialIcon {
   height: 30px;
   width: 30px;
 }
+
+/* Add animation for social icons */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+img.socialIcon {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+img.socialIcon:hover {
+  animation: bounce 0.6s;
+}
